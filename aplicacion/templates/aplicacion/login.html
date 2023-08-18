@@ -1,0 +1,20 @@
+{% extends 'aplicacion/index.html' %} 
+{% load static %}
+ 
+{% block title %}
+Login
+{% endblock title %} 
+
+{% block cabecera %}
+Login 
+{% endblock cabecera %} 
+
+{% block contenido %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+        {{ form.as_table }}
+        </table>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+{% endblock contenido %}

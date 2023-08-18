@@ -1,0 +1,61 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+
+{% block title %}
+PekoProject®/Bermudas
+{% endblock title %} 
+
+{% block cabecera %}
+  Bermudas
+{% endblock cabecera %}
+    {% block contenido %}
+    <table>
+        <tr>
+            <td width="200"><h2>Bermudas</h2></td>
+            <td>
+                <a
+                href="{% url 'create_bermudas' %}"
+                class="btn btn-primary btn-sm"
+                ><i class="fa fa-plus fa-lg" title="New Record"> </i>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Color</th>
+                <th>Talle</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bermuda in bermudas %}
+        <tr>
+            <td>{{ bermuda.id }}</td>
+            <td>{{ bermuda.nombre }}</td>
+            <td>{{ bermuda.color }}</td>
+            <td>{{ bermuda.talle }}</td>
+            <td>${{ bermuda.precio }}</td>
+            <td>
+                <a 
+                href="{% url 'update_bermuda' bermuda.id %}"
+                 class="btn btn-primary"
+                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                 ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                 </a>  
+                <a
+                 href="{% url 'eliminar_bermuda' bermuda.id %} "
+                 class="btn btn-danger"
+                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                 ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>
+             </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock contenido %}

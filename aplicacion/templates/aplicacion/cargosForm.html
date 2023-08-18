@@ -1,0 +1,24 @@
+{% extends 'aplicacion/index.html' %} 
+{% load static %} 
+
+{% block title %}
+  Cargar Cargo
+{% endblock title%} 
+
+{% block cabecera %}
+  Cargar Cargo
+{% endblock cabecera %} 
+
+{% block contenido %}
+</head>
+<body>
+    <h2>Cargar Pantalones Cargo</h2>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <p>Cargo:<input type="text" name="nombre" id="nombre"></p>
+        <p>Color :<input type="text" name="color" id="color"></p>
+        <p>Talle :<input type="text" name="talle" id="talle"></p>
+        <p>Precio :<input type="text" name="precio" id="precio"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

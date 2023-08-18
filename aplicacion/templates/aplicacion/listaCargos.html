@@ -1,0 +1,35 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+
+{% block title %}
+ PekoProject®/Cargos
+{% endblock title %}
+    
+{% block cabecera %}
+ Cargos
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Color</th>
+            <th>Talle</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for cargo in lista_cargos %}
+    <tr>
+        <td>{{ cargo.id }}</td>
+        <td>{{ cargo.nombre }}</td>
+        <td>{{ cargo.color }}</td>
+        <td>{{ cargo.talle }}</td>
+        <td>${{ cargosprecio }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

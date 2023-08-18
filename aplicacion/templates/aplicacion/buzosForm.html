@@ -1,0 +1,23 @@
+{% extends 'aplicacion/index.html' %} 
+{% load static %} 
+
+{% block title %}
+  Cargar Buzo
+{% endblock title %} 
+
+{% block cabecera %}
+  Cargar Buzo
+{% endblock cabecera %} 
+
+{% block contenido %}
+<body>
+    <h2>Cargar Buzos</h2>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <p>Buzo:<input type="text" name="nombre" id="nombre"></p>
+        <p>Color :<input type="text" name="color" id="color"></p>
+        <p>Talle :<input type="text" name="talle" id="talle"></p>
+        <p>Precio :<input type="text" name="precio" id="precio"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

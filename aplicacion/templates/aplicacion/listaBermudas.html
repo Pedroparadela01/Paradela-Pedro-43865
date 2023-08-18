@@ -1,0 +1,35 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+
+{% block title %}
+    PekoProject®/Bermudas
+{% endblock title %}
+
+{% block cabecera %}
+  Bermudas
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Color</th>
+            <th>Talle</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for bermudas in lista_bermudas %}
+    <tr>
+        <td>{{ bermudas.id }}</td>
+        <td>{{ bermudas.nombre }}</td>
+        <td>{{ bermudas.color }}</td>
+        <td>{{ bermudas.talle }}</td>
+        <td>${{ bermudas.precio }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>  
+</table>
+{% endblock contenido %}

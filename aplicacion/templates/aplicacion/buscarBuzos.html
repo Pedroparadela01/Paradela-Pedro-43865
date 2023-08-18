@@ -1,0 +1,31 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+
+{% block title %}
+  Busqueda de Buzos
+{% endblock title %} 
+
+{% block cabecera %}
+  Buscar Buzos
+{% endblock cabecera %}
+
+{% block contenido %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda Buzos</title>
+</head>
+<body>
+    <h3>Ingrese el Buzo que desea buscar:</h3>
+    <form action="/aplicacion/buscar" method="get">
+        {% csrf_token %}
+        <input type="text" name="buzos" id="buzos">
+        <input type="submit" value="Buscar">
+    </form>
+    
+</body>
+</html>
+{% endblock contenido %}

@@ -1,0 +1,34 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+{% block title %}
+ PekoProject®/Remeras
+{% endblock title %}
+
+{% block cabecera %}
+  Remeras
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Color</th>
+            <th>Talle</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for remera in lista_remeras %}
+    <tr>
+        <td>{{ remera.id }}</td>
+        <td>{{ remera.nombre }}</td>
+        <td>{{ remera.color }}</td>
+        <td>{{ remera.talle }}</td>
+        <td>${{ remera.precio }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

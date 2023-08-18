@@ -1,0 +1,39 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+
+{% block title %}
+PekoProject®/Buzos
+{% endblock title %} 
+
+{% block cabecera %}
+  Buzos
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Color</th>
+            <th>Talle</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for buzo in lista_buzos %}
+    <tr>
+        <td>{{ buzo.id }}</td>
+        <td>{{ buzo.nombre }}</td>
+        <td>{{ buzo.color }}</td>
+        <td>{{ buzo.talle }}</td>
+        <td>${{ buzo.precio }}</td>
+    </tr>
+    {% endfor %}
+       
+
+<a target="_blank" class="fcc-btn" href="{% url 'buscarbuzos' %}">Buscar buzos</a>
+
+
+{% endblock contenido %}
+

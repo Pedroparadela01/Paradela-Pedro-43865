@@ -1,0 +1,32 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+{% block titulo %}
+  Resultados de Busqueda
+{% endblock titulo %} 
+
+{% block cabecera %}
+  Resultados de Busqueda
+{% endblock cabecera %} 
+    
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Color</th>
+            <th>Talle</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for buzo in buzos %}
+    <tr>
+        <td>{{ buzo.id }}</td>
+        <td>{{ buzo.nombre }}</td>
+        <td>{{ buzo.color }}</td>
+        <td>{{ buzo.talle }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

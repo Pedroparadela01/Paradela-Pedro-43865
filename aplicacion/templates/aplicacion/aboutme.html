@@ -1,0 +1,30 @@
+{% extends 'aplicacion/index.html' %}
+{% load static %}
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About Me</title>
+
+			<!-- Custom styles for this template go here -->
+				<link rel="stylesheet" href="css/about_styles.css">
+
+			<!--[if lt IE 9]>
+			<script src="dist/html5shiv.js"></script>
+			<![endif]-->			
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>About Me</h1>
+				<h3>Pedro Paradela</h3>
+				<p>Hola! Mi nombre es Pedro Paradela, tengo 22 años y visitaste esta pagina porque actualmente estoy aprendiendo, a traves de CoderHouse,
+                    el idioma de programacion python. Espero en un futuro cercano poder implementar y plasmar los conocimientos adquiridos en este curso
+                    en el trabajo.
+            </div>
+		</div>
+	</body>
+</html>
+{% endblock contenido%}

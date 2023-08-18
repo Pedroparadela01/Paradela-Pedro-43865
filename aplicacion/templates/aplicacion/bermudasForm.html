@@ -1,0 +1,23 @@
+{% extends 'aplicacion/index.html' %} 
+{% load static %} 
+
+{% block title %}
+  Cargar Bermuda
+{% endblock title %} 
+
+{% block cabecera %}
+  Cargar Beremuda
+{% endblock cabecera %} 
+
+{% block contenido %}
+</head>
+<body>
+    <h2>Cargar Bermudas</h2>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <p>Bermuda:<input type="text" name="nombre" id="nombre"></p>
+        <p>Color :<input type="text" name="color" id="color"></p>
+        <p>Talle :<input type="text" name="talle" id="talle"></p>
+        <p>Precio :<input type="text" name="precio" id="precio"></p>
+    </form>
+{% endblock contenido %}
