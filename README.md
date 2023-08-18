@@ -3,3 +3,4 @@ Mi Proyecto se llama PekoProject y emula ser una tienda online de ropa, en la au
 Para acadder al panel de administacion debera usar el usuario: julia y la clave: Paradela1805. Antes debera iniciar sesion a traves del loguin.
 Para agregar un avatar a su usuario debera escribir en el browser: 'agregar_avatar/''
 Para editar su usuario debera escribir en el browser: 'editar_perfil/'
+Video probando algunas utilidades: https://www.youtube.com/watch?v=w4zN8v-wlNY
